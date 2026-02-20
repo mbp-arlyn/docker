@@ -39,6 +39,7 @@ localhost {
         header_up X-Real-IP {remote_host}
         header_up X-Forwarded-For {http.X-Forwarded-For} {remote_host}
         header_up X-Forwarded-Proto {scheme}
+        header_up X-Http-Version {http.request.proto}
     }
 
     handle /static/* {
