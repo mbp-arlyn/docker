@@ -58,6 +58,7 @@ services:
       - POSTGRES_PASSWORD=wger
       - POSTGRES_DB=wger
       - TZ=Europe/Berlin
+      - POSTGRES_INITDB_ARGS=--auth=scram-sha-256
     volumes:
       - postgres-data:/var/lib/postgresql/data/
     expose:
